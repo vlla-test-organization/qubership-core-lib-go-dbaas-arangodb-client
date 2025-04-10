@@ -6,6 +6,8 @@ import (
 	"testing"
 
 	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/security"
 	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/baseproviders/tenant"
 	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/ctxmanager"
 	"github.com/netcracker/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
@@ -24,6 +26,8 @@ type ArangoClientTestSuite struct {
 }
 
 func (suite *ArangoClientTestSuite) SetupSuite() {
+	serviceloader.Register(1, &security.TenantContextObject{})
+	serviceloader.Register(1, &security.DummyToken{})
 	os.Setenv(propMicroserviceName, "test_service")
 	os.Setenv(namespaceEnvName, "test_space")
 	configloader.Init(configloader.EnvPropertySource())

@@ -11,6 +11,8 @@ import (
 
 	"github.com/arangodb/go-driver/v2/connection"
 	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/security"
 	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
 	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model"
 	. "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/testutils"
@@ -37,6 +39,9 @@ type ArangoDatabaseTestSuite struct {
 }
 
 func (suite *ArangoDatabaseTestSuite) SetupSuite() {
+	serviceloader.Register(1, &security.TenantContextObject{})
+	serviceloader.Register(1, &security.DummyToken{})
+
 	StartMockServer()
 	os.Setenv(propMicroserviceName, "test_service")
 	os.Setenv(namespaceEnvName, "test_space")

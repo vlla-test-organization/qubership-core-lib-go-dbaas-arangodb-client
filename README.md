@@ -39,7 +39,6 @@ import (
 
 func init() {
 	serviceloader.Register(1, &security.DummyToken{})
-	serviceloader.Register(1, &security.TenantContextObject{})
 }
 ```
 

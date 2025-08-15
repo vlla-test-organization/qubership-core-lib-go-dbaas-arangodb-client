@@ -5,16 +5,16 @@ import (
 	"os"
 	"testing"
 
-	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/security"
-	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/baseproviders/tenant"
-	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/ctxmanager"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/configloader"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/context-propagation/baseproviders/tenant"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/context-propagation/ctxmanager"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/security"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/serviceloader"
 )
 
 const (

@@ -8,20 +8,20 @@ import (
 	"testing"
 	"time"
 
-	constants "github.com/netcracker/qubership-core-lib-go/v3/const"
 	"github.com/arangodb/go-driver/v2/arangodb"
 	"github.com/arangodb/go-driver/v2/connection"
 	"github.com/docker/go-connections/nat"
-	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/cache"
-	basemodel "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/wait"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/cache"
+	basemodel "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/configloader"
+	constants "github.com/vlla-test-organization/qubership-core-lib-go/v3/const"
 )
 
 const (

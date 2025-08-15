@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/arangodb/go-driver/v2/connection"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/cache"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/cache"
 )
 
 type Database interface {

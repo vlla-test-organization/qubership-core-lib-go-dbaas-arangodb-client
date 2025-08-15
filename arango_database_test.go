@@ -10,27 +10,27 @@ import (
 	"testing"
 
 	"github.com/arangodb/go-driver/v2/connection"
-	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/security"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model"
-	. "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/testutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model"
+	. "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/testutils"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/configloader"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/security"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/serviceloader"
 )
 
 const (
-	dbaasAgentUrlEnvName     = "dbaas.agent"
-	testServiceName          = "service_test"
-	createDatabaseV3         = "/api/v3/dbaas/test_namespace/databases"
-	getDatabaseV3            = "/api/v3/dbaas/test_namespace/databases/get-by-classifier/arango"
-	username                 = "service_test"
-	password                 = "qwerty127"
-	dbName                   = "arango_db_name"
-	host                     = "arango.host"
-	port                     = 8529
-	dbIdParamValue           = "db-id-1"
+	dbaasAgentUrlEnvName = "dbaas.agent"
+	testServiceName      = "service_test"
+	createDatabaseV3     = "/api/v3/dbaas/test_namespace/databases"
+	getDatabaseV3        = "/api/v3/dbaas/test_namespace/databases/get-by-classifier/arango"
+	username             = "service_test"
+	password             = "qwerty127"
+	dbName               = "arango_db_name"
+	host                 = "arango.host"
+	port                 = 8529
+	dbIdParamValue       = "db-id-1"
 )
 
 type ArangoDatabaseTestSuite struct {

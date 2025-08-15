@@ -5,15 +5,15 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/netcracker/qubership-core-lib-go/v3/utils"
 	"github.com/arangodb/go-driver/v2/arangodb"
 	"github.com/arangodb/go-driver/v2/arangodb/shared"
 	"github.com/arangodb/go-driver/v2/connection"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/cache"
-	basemodel "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-arangodb-client/v4/model"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/cache"
+	basemodel "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/utils"
 )
 
 type ArangoDbClient interface {
